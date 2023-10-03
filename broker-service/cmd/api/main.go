@@ -6,7 +6,7 @@ import (
 	"net/http"
 )
 
-const webPort = "8090"
+var webPort = "80"
 
 type Config struct {}
 
@@ -15,7 +15,7 @@ func main()  {
 	app := Config{}
 
 	log.Printf("Starting broker service on port %s\n", webPort)
-
+	
 	// define http server
 
 	srv := &http.Server{
